@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>directions</title>
+        <style>
+            body{background-image: url("background.png");}
+            table {
+                border-collapse: collapse;
+                margin: auto;
+                font-size: 0.9em;
+                font-family: sans-serif;
+                min-width: 400px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+                border: 1;
+            }
+            th {background-color: #009879;color: #ffffff;text-align: center;}
+            td {padding: 12px 15px;text-align: center;}
+            tr {border-bottom: 1px solid #dddddd;}
+            tr:nth-of-type(even) {background-color: #d19f9f;}
+            tr:nth-of-type(odd) {background-color: #873a3a;color: #f3f3f3;}
+            tr:last-of-type {border-bottom: 2px solid #009879;color: #f3f3f3;}
+            h1,h2,h3{text-transform: uppercase;font-family: monospace; color: #e8e2e2;text-align: center;}
+            li,td{font-weight: bolder; font-family: 'Courier New', Courier, monospace;font-size: large;}
+
+            #buttons{
+                position: fixed;
+                top: 200;
+                right: 75;
+                /* opacity: 0.75; */
+            }
+
+
+            .btn{
+                margin-bottom: 10px;
+                width:200px; 
+                height:40px;
+                color:rgb(255, 0, 0);
+                background-color:rgb(152, 197, 237);
+                border-radius:7px;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-weight: bolder;
+                font-family: cursive;
+                font-size: larger;
+                opacity: 0.75;
+            }
+        </style>
+        <script>
+            function play(){
+                window.location.href = "index.html";
+            }
+            function home(){
+                window.location.href = "main.html";
+            }
+            function onmousePlay(){
+                document.getElementById('play').style.opacity = 1
+            }
+            function outmousePlay(){
+                document.getElementById('play').style.opacity = 0.75
+            }
+            function onmouseHome(){
+                document.getElementById('home').style.opacity = 1
+            }
+            function outmouseHome(){
+                document.getElementById('home').style.opacity = 0.75
+            }
+        </script>
+    </head>
+    <body>
+        <div id="buttons" >
+            <button type="button" id="play" class="btn" onclick="play()" onmouseenter="onmousePlay()" onmouseleave="outmousePlay()">PLAY GAME</button><br>
+            <button type="button" id="home" class="btn" onclick="home()" onmouseenter="onmouseHome()" onmouseleave="outmouseHome()">HOME</button>
+        </div>
+        <h1>
+            samurai kenji
+        </h1>
+        <h2>
+            directions..
+        </h2>
+        <ul>
+            <li>This game is a multiplayer game. Two players are able to play at a time. </li>
+            <li>Left player is the samurai player. He can be controlled by A, W, S, D keys and keys for move left, jump, attack and move right respectfully.</li>
+            <li>Right side player is the Kenji. He can be controlled by ArrowLeft, ArrowUp, ArrowDown, ArrowRight keys 
+            and keys for move left, jump, attack and move right respectfully.</li><p>
+            <li><table>
+                <tr><th>Key</th><th>Function</th></tr>
+                <tr><td>A</td><td>Move left (Samurai)</td></tr>
+                <tr><td>W</td><td>Jump (Samurai)</td></tr>
+                <tr><td>S</td><td>Attack (Samurai)</td></tr>
+                <tr><td>D</td><td>Move right (Samurai)</td></tr>
+                <tr><td>ArrowLeft</td><td>Move left (Kenji)</td></tr>
+                <tr><td>ArrowUp</td><td>Jump (Kenji)</td></tr>
+                <tr><td>ArrowDown</td><td>Attack (Kenji)</td></tr>
+                <tr><td>ArrowRight</td><td>Move right (Kenji)</td></tr>
+            </table></p></li>
+            <li>Each player can take maximum 5 hits. After 5 hits the player who takes hit will be lose.</li>
+            <li>Time duration is 60 seconds. Within 60 seconds player should play. If no player loses, winner will be determined according to the health level
+            at the end of the 60 seconds. </li>
+        </ul><br>
+
+       
+
+        <h3 style="color: black;">Enjoy then..</h3>
+    </body>
+</html>
